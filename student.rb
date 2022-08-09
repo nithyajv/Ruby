@@ -18,9 +18,10 @@ class Student
     @mark3=mark3
   end
   def calc_total()
-    @@total_marks=@mark1+@mark2+@mark3
+    @total_marks=@mark1+@mark2+@mark3
   end
   def disp_details()
+    calc_total()
     puts "Rollno: #{rollno}"
     puts "Name: #{stud_name}"
     puts "Total marks: #{total_marks}"
@@ -28,6 +29,5 @@ class Student
 end
 
 ob=Student.new()
-ob.set_details("32","Nithya",12,15,18)
-ob.calc_total()
+ob.set_details(32,"Nithya",12,15,18)
 ob.disp_details()
