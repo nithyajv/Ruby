@@ -9,28 +9,25 @@ Please define the variable names, classes, methods and all coding in ruby way of
 =end
 
 class Student
-  attr_accessor :rollno, :studName, :totalMarks
-  def setStudDetails(rollno,studName,mark1,mark2,mark3)
+  attr_accessor :rollno, :stud_name, :total_marks
+  def set_details(rollno,stud_name,mark1,mark2,mark3)
     @rollno=rollno
-    @studName=studName
+    @stud_name=stud_name
     @mark1=mark1
     @mark2=mark2
     @mark3=mark3
   end
-  def calculateTotal()
-    @@totalMarks=@mark1+@mark2+@mark3
+  def calc_total()
+    @@total_marks=@mark1+@mark2+@mark3
   end
-  def displayStudDetails()
+  def disp_details()
     puts "Rollno: #{rollno}"
-    puts "Name: #{studName}"
-    puts "Total marks: #{totalMarks}"
+    puts "Name: #{stud_name}"
+    puts "Total marks: #{total_marks}"
   end
-end
-
-class StudentDemo
 end
 
 ob=Student.new()
-ob.setStudDetails("32","Nithya",12,15,18)
-ob.calculateTotal()
-ob.displayStudDetails()
+ob.set_details("32","Nithya",12,15,18)
+ob.calc_total()
+ob.disp_details()
