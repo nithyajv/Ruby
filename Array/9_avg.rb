@@ -14,15 +14,15 @@ while d>0
 end
 puts "Array is:#{arr}"
 l=arr[0]
-s=arr[0]
+sm=arr[0]
 s=0
 while n>0
   n-=1
   if arr[n]>l
     l=arr[n]
   end
-  if arr[n]<s  
-    s=arr[n]
+  if arr[n]<sm  
+    sm=arr[n]
   end
 end
 while n1>0
@@ -31,6 +31,6 @@ while n1>0
 end
 avg=s/n2
 puts "Largest=#{l}"
-puts "Smallest=#{s}"
+puts "Smallest=#{sm}"
 puts "Sum=#{s}"
 puts "Average=#{avg}"
