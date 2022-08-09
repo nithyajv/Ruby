@@ -7,7 +7,11 @@ puts "Enter the character"
 char=gets.chomp
 char.downcase!
 if string.start_with?(char)
-  string.slice!(0)
+  string.each_char do |x|
+    if char==x
+      string.delete!(x)
+    end
+  end
   puts string
 else
   puts "Not found"
